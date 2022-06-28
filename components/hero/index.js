@@ -92,12 +92,42 @@ const Hero = () => {
                   </motion.span>
                 ))}
               </motion.span>
-              <span className={styles.slidingText}>COMING SOON</span>
-              <span className={styles.slidingText}>COMING SOON</span>
-              <span className={styles.slidingText}>COMING SOON</span>
-              <span className={styles.slidingText}>COMING SOON</span>
-              <span className={styles.slidingText}>COMING SOON</span>
-              <span className={styles.slidingText}>COMING SOON</span>
+              <motion.span
+                className={styles.slidingText}
+                variants={heroVariants.fadeText}
+              >
+                COMING SOON
+              </motion.span>
+              <motion.span
+                className={styles.slidingText}
+                variants={heroVariants.fadeText}
+              >
+                COMING SOON
+              </motion.span>
+              <motion.span
+                className={styles.slidingText}
+                variants={heroVariants.fadeText}
+              >
+                COMING SOON
+              </motion.span>
+              <motion.span
+                className={styles.slidingText}
+                variants={heroVariants.fadeText}
+              >
+                COMING SOON
+              </motion.span>
+              <motion.span
+                className={styles.slidingText}
+                variants={heroVariants.fadeText}
+              >
+                COMING SOON
+              </motion.span>
+              <motion.span
+                className={styles.slidingText}
+                variants={heroVariants.fadeText}
+              >
+                COMING SOON
+              </motion.span>
             </motion.div>
           </div>
         </motion.div>

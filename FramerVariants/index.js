@@ -85,4 +85,17 @@ export const heroVariants = {
       },
     },
   },
+  fadeText: {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 1,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+  },
 };
