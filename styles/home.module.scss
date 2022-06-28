@@ -1,0 +1,244 @@
+@import "./globalStyling.module.scss";
+.container {
+  background: #000;
+  margin: 0;
+  padding: 41px 36px;
+  color: #fff;
+  padding-bottom: 100px;
+  overflow: hidden;
+  .header {
+    margin-bottom: 130px;
+  }
+  .logo {
+    font-family: $headingFont;
+    font-weight: normal;
+    margin: 0;
+
+    span:first-of-type {
+      color: $accentColour;
+    }
+  }
+  .headingText {
+    display: none;
+    font-family: $headingFont;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .contactDetailsMobile {
+    margin-bottom: 64px;
+  }
+  .sectionTitle {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .socialLink {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  a.socialLink {
+    position: relative;
+    width: fit-content;
+    &::after {
+      width: 0%;
+      height: 3px;
+      background-color: $accentColour;
+      position: absolute;
+      content: "";
+      right: 0;
+      transition: all 0.4s ease-in-out;
+      bottom: 8px;
+    }
+    &:hover {
+      &::after {
+        right: unset;
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
+
+.scrollWrapper {
+  display: flex;
+  width: calc(100% + 72px);
+  margin-left: -36px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 120px;
+  margin-bottom: 100px;
+}
+.scrollContainer {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  z-index: 2;
+  .scrollInnerContainer {
+    display: flex;
+    overflow: scroll;
+    background: transparent;
+    .slidingText {
+      display: block;
+      text-transform: uppercase;
+      position: relative;
+      font-family: $headingFont;
+      font-size: 120px;
+      padding-left: 10px;
+      opacity: 1;
+      width: 1000px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+}
+.slidingTextLetter {
+  display: inline-block;
+  &:nth-of-type(6) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    padding: 50px;
+  }
+  .scrollWrapper {
+    width: calc(100% + 100px);
+    margin-left: -50px;
+  }
+  .slidingTextLetter {
+    display: inline-block;
+    &:nth-of-type(6) {
+      margin-right: 40px;
+    }
+  }
+  .contactDetailsContainer {
+    display: flex;
+    gap: 140px;
+    .sectionTitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .socialLink {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+  .scrollWrapper {
+    height: 170px;
+    margin-bottom: 120px;
+  }
+  .scrollContainer {
+    .scrollInnerContainer {
+      .slidingText {
+        font-size: 170px;
+        width: 1450px;
+      }
+    }
+  }
+  .container {
+    .headingText {
+      display: block;
+    }
+    .header {
+      display: flex;
+      width: 100%;
+      margin-bottom: 150px;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding: 100px;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .scrollWrapper {
+    width: 100vw;
+    margin-left: -100px;
+  }
+  .slidingTextLetter {
+    display: inline-block;
+    &:nth-of-type(6) {
+      margin-right: 70px;
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .slidingTextLetter {
+    display: inline-block;
+    &:nth-of-type(6) {
+      margin-right: 100px;
+    }
+  }
+  .scrollWrapper {
+    width: 100vw;
+    margin-left: calc(((100vw - 1600px) / 2) * -1);
+    height: 200px;
+  }
+  .container {
+    .logo {
+      font-size: 30px;
+    }
+    .headingText {
+      font-size: 30px;
+    }
+    .header {
+      margin-bottom: 200px;
+    }
+  }
+  .scrollWrapper {
+    margin-bottom: 200px;
+  }
+  .scrollContainer {
+    .scrollInnerContainer {
+      .slidingText {
+        font-size: 250px;
+        width: 2100px;
+      }
+    }
+  }
+  .innerContainer {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .contactDetailsContainer {
+    display: flex;
+    gap: 270px;
+    .sectionTitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .socialLink {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    a.socialLink {
+      &::after {
+        height: 6px;
+        bottom: 10px;
+      }
+    }
+  }
+}
