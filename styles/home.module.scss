@@ -91,7 +91,7 @@
   z-index: 2;
   .scrollInnerContainer {
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
     background: transparent;
     .slidingText {
       display: block;
@@ -167,26 +167,19 @@
   }
 }
 
-@media (min-width: 1400px) {
-  .container {
-    padding: 100px;
-    display: flex;
-    width: 100vw;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .scrollWrapper {
-    width: 100vw;
-    margin-left: -100px;
-  }
-  .slidingTextLetter {
-    display: inline-block;
-    &:nth-of-type(6) {
-      margin-right: 70px;
-    }
-  }
-}
+// @media (min-width: 1400px) {
+
+//   .scrollWrapper {
+//     width: 100vw;
+//     margin-left: -100px;
+//   }
+//   .slidingTextLetter {
+//     display: inline-block;
+//     &:nth-of-type(6) {
+//       margin-right: 70px;
+//     }
+//   }
+// }
 
 @media (min-width: 1700px) {
   .slidingTextLetter {
@@ -194,6 +187,14 @@
     &:nth-of-type(6) {
       margin-right: 100px;
     }
+  }
+  .container {
+    padding: 100px;
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
   }
   .scrollWrapper {
     width: 100vw;
@@ -235,7 +236,7 @@
       margin-bottom: 30px;
     }
     .socialLink {
-      font-size: 25px;
+      font-size: 22px;
       margin-bottom: 20px;
     }
     a.socialLink {
