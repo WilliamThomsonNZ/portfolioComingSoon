@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Will - Web3 Development Services</title>
-        <meta name="description" content="WEB3 DEVELOPMENT SERVICES" />
+        <title>WILL - Independent Creative Developer</title>
+        <meta name="description" content="Independent Creative Developer" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <AnimatePresence>

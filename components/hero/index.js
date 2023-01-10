@@ -15,14 +15,13 @@ const Hero = () => {
   const timeOffset = 12;
   const NewZealandTime = new Date(utcTime + 3600000 * timeOffset);
   const hours =
-    NewZealandTime.getHours() > 12
-      ? NewZealandTime.getHours() - 12
-      : NewZealandTime.getHours();
+    (NewZealandTime.getHours() + 1) > 12
+      ? (NewZealandTime.getHours() + 1) - 12
+      : (NewZealandTime.getHours() + 1);
 
   const morning = NewZealandTime.getHours() > 11 ? "PM" : "AM";
-  const time = `${hours}:${
-    NewZealandTime.getMinutes() < 10 ? "0" : ""
-  }${NewZealandTime.getMinutes()} ${morning}`;
+  const time = `${hours}:${NewZealandTime.getMinutes() < 10 ? "0" : ""
+    }${NewZealandTime.getMinutes()} ${morning}`;
 
   const textCarousel = {
     initial: {
@@ -61,11 +60,10 @@ const Hero = () => {
           <h2 className={styles.logo}>
             <span>
               WILL
-              <br />
             </span>
             <span>THOMSON</span>
           </h2>
-          <h6 className={styles.headingText}>WEB3 DEVELOPMENT SERVICES</h6>
+          <h6 className={styles.headingText}>INDEPENDENT CREATIVE DEVELOPER</h6>
         </motion.header>
         <motion.div className={styles.scrollWrapper}>
           <div className={styles.scrollContainer}>

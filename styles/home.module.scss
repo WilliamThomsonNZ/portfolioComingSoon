@@ -13,9 +13,12 @@
     font-family: $headingFont;
     font-weight: normal;
     margin: 0;
-
     span:first-of-type {
       color: $accentColour;
+      margin-bottom: -10px;
+    }
+    span {
+      display: block;
     }
   }
   .headingText {
@@ -30,7 +33,7 @@
     margin-bottom: 64px;
   }
   .sectionTitle {
-    font-family: $font;
+    font-family: $headingFont;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -39,11 +42,12 @@
     color: rgba(255, 255, 255, 0.5);
   }
   .socialLink {
-    font-family: $font;
+    font-family: $headingFont;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     display: block;
+    text-transform: uppercase;
     margin-bottom: 8px;
   }
   a.socialLink {
@@ -51,12 +55,12 @@
     width: fit-content;
     &::after {
       width: 0%;
-      height: 3px;
+      height: 2px;
       background-color: $accentColour;
       position: absolute;
       content: "";
       right: 0;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.2s ease-in-out;
       bottom: 8px;
     }
     &:hover {
@@ -77,7 +81,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 120px;
+  height: 140px;
   margin-bottom: 100px;
 }
 .scrollContainer {
@@ -138,7 +142,7 @@
     }
   }
   .scrollWrapper {
-    height: 170px;
+    height: 220px;
     margin-bottom: 120px;
   }
   .scrollContainer {
@@ -194,14 +198,14 @@
   .scrollWrapper {
     width: 100vw;
     margin-left: calc(((100vw - 1600px) / 2) * -1);
-    height: 200px;
+    height: 260px;
   }
   .container {
     .logo {
       font-size: 30px;
     }
     .headingText {
-      font-size: 30px;
+      font-size: 22px;
     }
     .header {
       margin-bottom: 200px;
